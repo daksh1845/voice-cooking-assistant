@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.montserrat-alternates-thin {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.montserrat-alternates-extralight {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.montserrat-alternates-light {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-alternates-regular {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-alternates-medium {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat-alternates-semibold {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-alternates-bold {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-alternates-extrabold {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-alternates-black {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.montserrat-alternates-thin-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.montserrat-alternates-extralight-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.montserrat-alternates-light-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.montserrat-alternates-regular-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.montserrat-alternates-medium-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.montserrat-alternates-semibold-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.montserrat-alternates-bold-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.montserrat-alternates-extrabold-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.montserrat-alternates-black-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button, a, div, span {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************* COMPONENTS  */
+/* 1. NAVBAR.JSX */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 22px; border-bottom: 1px solid #565656; background-color: #ffffff; font-family: "Montserrat Alternates", sans-serif; }
+.navbar h1 { color: #2596be; font-weight: 700; font-size: 28px; margin: 0; }
+.navbar button { background-color: #565656; color: #ffffff; border: none; padding: 12px 22px; border-radius: 6px; cursor: pointer; font-family: "Montserrat Alternates", sans-serif; font-weight: 600; font-size: 16px; }
+.navbar button:hover { background-color: #444444; }
+.profile-container { position: relative; cursor: pointer; display: flex; align-items: center; gap: 10px; color: #565656; font-family: "Montserrat Alternates", sans-serif; font-size: 18px; }
+.profile-menu { position: absolute; top: 40px; right: 0; background: #ffffff; border: 1px solid #565656; padding: 12px; border-radius: 6px; min-width: 140px; opacity: 0; visibility: hidden; transition: 0.2s ease; }
+.profile-menu.show { opacity: 1; visibility: visible; }
+.profile-username { color: #000000; font-weight: 600; margin-bottom: 10px; font-size: 16px; }
+
+@media (max-width: 600px) {
+.navbar { padding: 16px; margin-bottom: 40px; }
+.navbar h1 { font-size: 20px; }
+.navbar button { font-size: 14px; padding: 10px 18px; }
+.profile-container { font-size: 22px; }
+}
+
+
+
+
+/* 3. RECIPECARD.JSX */
+/* RecipeCard.css (if separate) or add to main CSS */
+/* RecipeCard CSS */
+/* RecipeCard CSS */
+.recipe-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s; background: white; display: flex; flex-direction: column; height: auto; }
+.recipe-card:hover { transform: scale(1.02); border-color: #2596be; }
+.recipe-image-placeholder { width: 100%; aspect-ratio: 1 / 1; background: #f0f0f0; position: relative; flex-shrink: 0; }
+.recipe-image-placeholder::after { content: "🍽️"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 48px; }
+.recipe-title { padding: 12px; margin: 0; text-align: center; font-size: 16px; font-family: "Montserrat Alternates", sans-serif; font-weight: 500; color: black; background: white; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************* PAGES  */
+/* 2. COOKINGCOMPLETE.JSX */
+.complete-container { text-align: center; margin-top: 200px; padding: 40px; background: white; max-width: 500px; margin-left: auto; margin-right: auto; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.complete-tick { font-size: 80px; color: #2596be; margin-bottom: 20px; font-family: "Montserrat Alternates", sans-serif; font-weight: 300; }
+.complete-title { font-family: "Montserrat Alternates", sans-serif; font-weight: 700; font-size: 2rem; color: black; margin-bottom: 15px; }
+.complete-message { font-family: "Montserrat Alternates", sans-serif; font-weight: 400; font-size: 1rem; color: #565656; }
+@media (max-width: 768px) {
+  .complete-container { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; width: 85%; padding: 30px; }
+  .complete-tick { font-size: 60px; }
+  .complete-title { font-size: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .complete-container { width: 80%; padding: 20px; }
+  .complete-tick { font-size: 50px; }
+  .complete-title { font-size: 1.25rem; }
+  .complete-message { font-size: 0.9rem; }
+}
+
+/* 2. COOKINGMODE.JSX */
+
+body { background: #f5f5f5; }
+.cooking-mode-container { display: flex; gap: 40px; padding: 40px; max-width: 1100px; margin: 40px auto; background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.cooking-mode-left { flex: 1; display: flex; justify-content: center; align-items: center; }
+.cooking-mode-right { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.cooking-mode-image { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 380px; margin: 0 auto; }
+.cooking-mode-right h2 { font-family: "Montserrat Alternates", sans-serif; font-weight: 700; font-size: 2rem; color: black; margin-bottom: 20px; }
+.cooking-mode-right p { font-family: "Montserrat Alternates", sans-serif; font-weight: 400; font-size: 1rem; color: #565656; line-height: 1.5; margin-bottom: 15px; text-align: left; }
+.cooking-mode-right p:first-of-type { font-weight: 600; color: #2596be; margin-bottom: 10px; }
+.button-group { display: flex; gap: 15px; margin-top: 20px; }
+.button-group button { padding: 14px 28px; font-size: 1rem; background-color: #2596be; color: white; border: none; border-radius: 8px; cursor: pointer; font-family: "Montserrat Alternates", sans-serif; font-weight: 600; transition: background-color 0.3s; }
+.button-group button:hover { background-color: black; }
+.voice-hint { margin-top: 20px; font-size: 0.9rem; color: #565656; text-align: left; font-family: "Montserrat Alternates", sans-serif; font-weight: 400; }
+.listening-indicator { margin-top: 10px; font-size: 0.85rem; color: #2596be; text-align: left; animation: pulse 1s infinite; font-family: "Montserrat Alternates", sans-serif; font-weight: 500; }
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+@media (max-width: 768px) {
+  .cooking-mode-container { flex-direction: column; gap: 20px; padding: 20px; margin: 20px; }
+  .cooking-mode-left { order: 1; }
+  .cooking-mode-right { order: 2; text-align: center; align-items: center; }
+  .cooking-mode-image { max-width: 280px; }
+  .button-group { justify-content: center; }
+}
+@media (max-width: 480px) {
+  .cooking-mode-container { padding: 15px; margin: 15px; }
+  .cooking-mode-image { max-width: 240px; }
+  .cooking-mode-right h2 { font-size: 1.5rem; }
+  .button-group button { padding: 12px 24px; font-size: 0.9rem; }
+  .voice-hint { font-size: 0.8rem; }
+}
+
+/* 3. DASHBOARD.JSX */
+.dashboard-container { display: flex; height: calc(100vh - 80px); max-width: 1600px; margin: 0 auto; width: 100%; }
+.sidebar { width: 12%; background: #565656; padding: 20px; border-right: 1px solid #ddd; height: 100%; overflow-y: auto; margin-left: 0; }
+.sidebar h3 { color: white; font-family: "Montserrat Alternates", sans-serif; font-weight: 600; margin-bottom: 15px; }
+.sidebar p { color: #f5f5f5; font-family: "Montserrat Alternates", sans-serif; font-weight: 400; margin: 8px 0; }
+.main-content { width: 88%; padding: 20px; height: 100%; overflow-y: auto; overflow-x: hidden; }
+.search-bar { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; font-family: "Montserrat Alternates", sans-serif; font-weight: 400; box-sizing: border-box; }
+.search-bar:focus { outline: none; border-color: #2596be; }
+.recipe-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; width: 100%; }
+@media (max-width: 1024px) {
+  .recipe-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .dashboard-container { flex-direction: column; height: auto; max-width: 100%; margin: 0; padding: 0; }
+  .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid #ddd; margin-left: 0; padding: 20px; box-sizing: border-box; }
+  .main-content { width: 100%; height: auto; overflow-x: hidden; padding: 20px; box-sizing: border-box; }
+  .recipe-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; width: 100%; }
+  .search-bar { width: 100%; box-sizing: border-box; }
+}
+@media (max-width: 480px) {
+  .sidebar { padding: 15px; }
+  .main-content { padding: 15px; }
+  .recipe-grid { grid-template-columns: 1fr; gap: 15px; }
+}
+
+
+
+/* 4. HOME.JSX */
+.home-container { text-align: center; margin-top: 80px; display: flex; flex-direction: column; align-items: center; }
+.home-title { font-size: 3rem; color: black; font-family: "Montserrat Alternates", sans-serif; font-weight: 700; margin-top: 0; margin-bottom: 5px; }
+.home-description { font-size: 1.3rem; color: #565656; margin: 15px 0 15px 0; font-family: "Montserrat Alternates", sans-serif; font-weight: 400; }
+.home-image { width: 280px; margin: 20px auto; display: block; }
+.start-button { padding: 18px 40px; font-size: 1.4rem; background-color: #2596be; color: white; border: none; border-radius: 8px; cursor: pointer; font-family: "Montserrat Alternates", sans-serif; font-weight: 600; }
+.start-button:hover { background-color: black; }
+
+@media (max-width: 768px) {
+  .home-container { text-align: left; margin: 0; padding: 20px; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+  .home-title { font-size: 4rem; width: 100%; margin: 10px 0; }
+  .home-description { font-size: 1.5rem; width: 100%; margin: 15px 0; }
+  .home-image { width: 250px; margin: 25px auto; display: block; }
+  .start-button { padding: 16px 32px; font-size: 1.5rem; width: 80%; margin-top: 20px; }
+}
+
+@media (max-width: 480px) {
+  .home-title { font-size: 3.5rem; }
+  .home-description { font-size: 1.3rem; }
+  .home-image { width: 200px; margin: 20px auto; display: block; }
+  .start-button { padding: 14px 28px; font-size: 1.3rem; width: 90%; }
+}
+
+/* 5. RECIPEDETAILS.JSX */
+body { background: #f5f5f5; }
+.recipe-details-container { display: flex; gap: 40px; padding: 40px; max-width: 1100px; margin: 40px auto; background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.recipe-details-left { flex: 1; display: flex; justify-content: center; align-items: center; }
+.recipe-details-right { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.recipe-details-image { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 380px; margin: 0 auto; }
+.recipe-details-right h1 { font-family: "Montserrat Alternates", sans-serif; font-weight: 700; font-size: 2rem; color: black; margin-bottom: 10px; }
+.recipe-details-right h3 { font-family: "Montserrat Alternates", sans-serif; font-weight: 600; font-size: 1.25rem; color: #2596be; margin-top: 10px; margin-bottom: 5px; }
+.recipe-details-right p { font-family: "Montserrat Alternates", sans-serif; font-weight: 400; font-size: 1rem; color: #565656; line-height: 1.5; margin-bottom: 15px; }
+.cook-now-button { padding: 14px 28px; font-size: 1rem; background-color: #2596be; color: white; border: none; border-radius: 8px; cursor: pointer; font-family: "Montserrat Alternates", sans-serif; font-weight: 600; transition: background-color 0.3s; width: fit-content; margin-top: 40px; }
+.cook-now-button:hover { background-color: black; }
+
+@media (max-width: 768px) {
+  .recipe-details-container { flex-direction: column; gap: 20px; padding: 20px; margin: 20px; }
+  .recipe-details-left { order: 1; }
+  .recipe-details-right { order: 2; text-align: center; align-items: center; }
+  .recipe-details-image { max-width: 280px; }
+  .cook-now-button { margin-top: 20px; align-self: center; }
+}
+@media (max-width: 480px) {
+  .recipe-details-container { padding: 15px; margin: 15px; }
+  .recipe-details-image { max-width: 240px; }
+  .recipe-details-right h1 { font-size: 1.5rem; }
+  .recipe-details-right h3 { font-size: 1.1rem; }
+  .cook-now-button { padding: 12px 24px; font-size: 0.9rem; }
+}
+
+
+/* 6. LOGIN AND SIGNUP.JSX */
+.login-container { text-align: center; margin-top: 100px; font-family: "Montserrat Alternates", sans-serif; }
+.login-container h2 { display: none; }
+.login-container input { width: 260px; padding: 12px; margin: 8px 0; border: 1px solid #565656; border-radius: 6px; font-size: 14px; font-family: "Montserrat Alternates", sans-serif; }
+.login-container input:focus { outline: none; border-color: #2596be; }
+.login-container button { background-color: #565656; color: #ffffff; border: none; padding: 12px 22px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; margin-top: 10px; font-family: "Montserrat Alternates", sans-serif; }
+.login-container button:hover { background-color: #444444; }
+.login-container p { margin-top: 16px; color: #565656; font-size: 14px; }
+.login-container p button { background: none; color: #2596be; padding: 0; margin-left: 6px; font-size: 14px; border: none; cursor: pointer; }
+.login-container p button:hover { background: none; text-decoration: underline; color: #000000; }
+
+.signup-container { text-align: center; margin-top: 100px; font-family: "Montserrat Alternates", sans-serif; }
+.signup-container h2 { color: #000000; font-size: 28px; font-weight: 700; margin-bottom: 20px; }
+.signup-container input { width: 260px; padding: 12px; margin: 8px 0; border: 1px solid #565656; border-radius: 6px; font-size: 14px; font-family: "Montserrat Alternates", sans-serif; }
+.signup-container input:focus { outline: none; border-color: #2596be; }
+.signup-container button { background-color: #565656; color: #ffffff; border: none; padding: 12px 22px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; margin-top: 10px; font-family: "Montserrat Alternates", sans-serif; }
+.signup-container button:hover { background-color: #444444; }
+.signup-container p { margin-top: 16px; color: #565656; font-size: 14px; }
+.signup-container p button { background: none; color: #2596be; padding: 0; margin-left: 6px; font-size: 14px; border: none; cursor: pointer; }
+.signup-container p button:hover { background: none; text-decoration: underline; color: #000000; }
+
+@media (max-width: 600px) {
+.login-container { margin-top: 200px; }
+.signup-container { margin-top: 200px; }
+.signup-container h2 { font-size: 24px; }
+.login-container input, .signup-container input { width: 260px; font-size: 15px; padding: 12px; }
+.login-container button, .signup-container button { font-size: 16px; padding: 12px 22px; }
+.login-container p, .signup-container p { font-size: 15px; }
+}
