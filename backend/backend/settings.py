@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'api',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://vca-trial-deploy.vercel.app']
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
