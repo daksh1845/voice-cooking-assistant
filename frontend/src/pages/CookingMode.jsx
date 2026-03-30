@@ -39,9 +39,11 @@ function CookingMode() {
     recognition.onstart = () => setListening(true);
     recognition.onend = () => {
       setListening(false);
-      setTimeout(() => {
-        if (recognitionRef.current) recognition.start();
-      }, 500);
+      if (recognitionRef.current) {
+        setTimeout(() => {
+          if (recognitionRef.current) recognition.start();
+        }, 500);
+      }
     };
     recognition.onerror = () => setListening(false);
     recognition.onresult = (event) => {
@@ -56,6 +58,7 @@ function CookingMode() {
           if (stepRef.current + 1 < stepsLengthRef.current) {
             setStep(stepRef.current + 1);
           } else {
+            if (recognitionRef.current) recognition.stop();
             navigate('/complete', { state: { recipe } });
           }
         }
@@ -64,7 +67,12 @@ function CookingMode() {
 
     recognition.start();
     recognitionRef.current = recognition;
-    return () => recognition.stop();
+    return () => {
+      if (recognitionRef.current) {
+        recognitionRef.current.stop();
+        recognitionRef.current = null;
+      }
+    };
   }, [navigate, recipe]);
 
   const goBack = () => { if (step > 0) setStep(step - 1); };
@@ -72,6 +80,7 @@ function CookingMode() {
     if (step + 1 < steps.length) {
       setStep(step + 1);
     } else {
+      if (recognitionRef.current) recognitionRef.current.stop();
       navigate('/complete', { state: { recipe } });
     }
   };
