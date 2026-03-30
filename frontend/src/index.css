@@ -183,13 +183,10 @@ button, a, div, span {
 /* 3. RECIPECARD.JSX */
 /* RecipeCard.css (if separate) or add to main CSS */
 /* RecipeCard CSS */
-/* RecipeCard CSS */
-.recipe-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s; background: white; display: flex; flex-direction: column; height: auto; }
+.recipe-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s; background: white; }
 .recipe-card:hover { transform: scale(1.02); border-color: #2596be; }
-.recipe-image-placeholder { width: 100%; aspect-ratio: 1 / 1; background: #f0f0f0; position: relative; flex-shrink: 0; }
-.recipe-image-placeholder::after { content: "🍽️"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 48px; }
+.recipe-image { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 .recipe-title { padding: 12px; margin: 0; text-align: center; font-size: 16px; font-family: "Montserrat Alternates", sans-serif; font-weight: 500; color: black; background: white; }
-
 
 
 
