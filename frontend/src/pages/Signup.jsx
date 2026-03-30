@@ -10,7 +10,7 @@ function Signup() {
 
   const signup = async () => {
     try {
-      await axios.post('http://localhost:8000/api/signup/', form);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/signup/`, form);
       alert('Account created! Please login.');
       navigate('/login');
     } catch (err) {
