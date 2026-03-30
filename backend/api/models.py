@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='recipes/', blank=True, null=True)
+    image = models.URLField(max_length=500, blank=True, null=True)
     ingredients = models.TextField()
     steps = models.TextField()
 
