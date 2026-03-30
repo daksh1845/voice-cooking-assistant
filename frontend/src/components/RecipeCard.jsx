@@ -6,7 +6,7 @@ function RecipeCard({recipe}) {
   return (
     <div className="recipe-card" onClick={() => navigate('/recipe', { state: { recipe } })}>
       <img 
-        src={`http://127.0.0.1:8000${recipe.image}`} 
+        src={recipe.image} 
         alt={recipe.title} 
         className="recipe-image"
       />
