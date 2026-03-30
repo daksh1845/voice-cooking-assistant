@@ -33,11 +33,16 @@ function CookingMode() {
 
     const recognition = new SpeechRecognition();
     recognition.lang = 'en-US';
-    recognition.continuous = true;
+    recognition.continuous = false;
     recognition.interimResults = true;
 
     recognition.onstart = () => setListening(true);
-    recognition.onend = () => setListening(false);
+    recognition.onend = () => {
+      setListening(false);
+      setTimeout(() => {
+        if (recognitionRef.current) recognition.start();
+      }, 500);
+    };
     recognition.onerror = () => setListening(false);
     recognition.onresult = (event) => {
       const command = event.results[event.results.length - 1][0].transcript.toLowerCase();
