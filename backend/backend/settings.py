@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-splicc&4q+xsoomeni6a4p#z=(&xwl%+eds983abdv_n#(_&^=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['vca-trial-deploy.onrender.com', 'vca-trial-deploy.vercel.app']
+ALLOWED_HOSTS = ['vca-trial-deploy.onrender.com', 'vca-trial-deploy.vercel.app', 'vcca-web.vercel.app']
 
 
 # Application definition
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'api',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://vca-trial-deploy.vercel.app']
+CSRF_TRUSTED_ORIGINS = ['https://vca-trial-deploy.vercel.app', 'https://vcca-web.vercel.app']
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -71,7 +71,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", 'https://vca-trial-deploy.vercel.app']
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", 'https://vca-trial-deploy.vercel.app', 'https://vcca-web.vercel.app']
 
 ROOT_URLCONF = 'backend.urls'
 
