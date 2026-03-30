@@ -9,7 +9,7 @@ function Login() {
   const navigate = useNavigate();
 
   const login = async () => {
-    const res = await axios.post('http://localhost:8000/api/login/', form);
+    const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/login/`, form);
     localStorage.setItem('token', res.data.access);
     localStorage.setItem('username', res.data.username);
     navigate('/dashboard');

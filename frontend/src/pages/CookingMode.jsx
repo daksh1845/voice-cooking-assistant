@@ -79,7 +79,7 @@ function CookingMode() {
       <div className="cooking-mode-container">
         <div className="cooking-mode-left">
           <img 
-            src={`http://127.0.0.1:8000${recipe.image}`} 
+            src={`${process.env.REACT_APP_API_URL}${recipe.image}`} 
             alt={recipe.title} 
             className="cooking-mode-image"
           />

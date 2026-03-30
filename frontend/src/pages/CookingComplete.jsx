@@ -14,12 +14,12 @@ function CookingComplete() {
     
     if (!savedRef.current) {
       savedRef.current = true;
-      axios.get('http://localhost:8000/api/history/list/', {
+      axios.get(`${process.env.REACT_APP_API_URL}/api/history/list/`, {
         headers: { Authorization: `Bearer ${token}` }
       }).then(res => {
         const exists = res.data.some(item => item.recipe_title === recipe.title);
         if (!exists) {
-          axios.post('http://localhost:8000/api/history/', { recipe_id: recipe.id }, {
+          axios.post(`${process.env.REACT_APP_API_URL}/api/history/`, { recipe_id: recipe.id }, {
             headers: { Authorization: `Bearer ${token}` }
           });
         }

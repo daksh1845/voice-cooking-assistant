@@ -12,11 +12,11 @@ function Dashboard() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     
-    axios.get('http://localhost:8000/api/recipes/')
+    axios.get(`${process.env.REACT_APP_API_URL}/api/recipes/`)
       .then(res => setRecipes(res.data))
       .catch(err => console.log(err));
     
-    axios.get('http://localhost:8000/api/history/list/', {
+    axios.get(`${process.env.REACT_APP_API_URL}/api/history/list/`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setHistory(res.data))

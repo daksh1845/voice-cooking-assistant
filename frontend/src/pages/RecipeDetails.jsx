@@ -15,7 +15,7 @@ function RecipeDetails() {
       <div className="recipe-details-container">
         <div className="recipe-details-left">
           <img 
-            src={`http://127.0.0.1:8000${recipe.image}`} 
+            src={`${process.env.REACT_APP_API_URL}${recipe.image}`} 
             alt={recipe.title} 
             className="recipe-details-image"
           />
