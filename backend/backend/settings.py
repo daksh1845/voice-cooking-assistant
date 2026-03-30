@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-splicc&4q+xsoomeni6a4p#z=(&xwl%+eds983abdv_n#(_&^='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vca-trial-deploy.onrender.com', 'vca-trial-deploy.vercel.app']
 
 
 # Application definition
@@ -69,7 +69,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", 'https://vca-trial-deploy.vercel.app']
 
 ROOT_URLCONF = 'backend.urls'
 
