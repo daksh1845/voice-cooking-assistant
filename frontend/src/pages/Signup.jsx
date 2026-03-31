@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Navbar from '../components/Navbar';
 
 function Signup() {
   const [form, setForm] = useState({ username: '', password: '' });
@@ -20,7 +19,6 @@ function Signup() {
 
   return (
     <>
-      <Navbar />
       <div className="signup-container">
         <h2>Create Account</h2>
         <input placeholder="Username" onChange={e => setForm({...form, username: e.target.value})} />
