@@ -1,2 +1,2 @@
 View here : https://vcca-web.vercel.app/
-(It takes 30-60 seconds to backend service for start after long inactivity in render)
+(It takes 30-60 seconds for backend service to start after long inactivity in render)
