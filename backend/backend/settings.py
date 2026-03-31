@@ -71,7 +71,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS = ['https://vcca-web.vercel.app', "http://localhost:3000", 'https://vca-trial-deploy.vercel.app']
+CORS_ALLOWED_ORIGINS = ['https://vcca-web.vercel.app', 'https://vca-trial-deploy.vercel.app']
 
 ROOT_URLCONF = 'backend.urls'
 
